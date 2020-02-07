@@ -38,8 +38,8 @@
 
 * Clone this [repository](https://github.com/ayohana/galactic-age-calculator.git/)
 * Open the command line and navigate into the repository.
-* Use the command `$ npm install` to install all necessary plugins.
-* To test all TDD specs, use the command `$ npm test`.
+* Use the command `npm install` to install all necessary plugins.
+* To test all TDD specs, use the command `npm test`.
 
 ## Known Bugs
 
