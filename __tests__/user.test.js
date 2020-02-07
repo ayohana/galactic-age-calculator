@@ -5,10 +5,14 @@ describe("User", () => {
   
   let inputAge;
   let user;
+  let anotherUser;
 
   beforeEach(() => {
     inputAge = 25;
     user = new User(inputAge);
+    user.demographics.assignDailyExercise(true);
+    user.demographics.assignBMI("Normal");
+    user.demographics.assignOccupation("Professional Rock Climber");
   });
 
   test("should correctly create a user object with their Earth age", () => {
@@ -56,11 +60,17 @@ describe("User", () => {
   });
 
   test("should correctly return remaining years of user's life expectancy", () => {
-    user.demographics.assignDailyExercise(true);
-    user.demographics.assignBMI("Normal");
-    user.demographics.assignOccupation("Professional Rock Climber");
     user.calculateRemainingLife();
     expect(user.remainingLife).toEqual(75);
+  });
+
+  test("otherwise should correctly return number of years surpassing life expectancy", () => {
+    anotherUser = new User(105);
+    anotherUser.demographics.assignDailyExercise(true);
+    anotherUser.demographics.assignBMI("Normal");
+    anotherUser.demographics.assignOccupation("Professional Rock Climber");
+    anotherUser.calculateRemainingLife();
+    expect(anotherUser.remainingLife).toEqual(5);
   });
 
 });

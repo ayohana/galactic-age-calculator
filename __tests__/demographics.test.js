@@ -10,7 +10,7 @@ describe("Demographics", () => {
 
   test("should correctly assign true to daily exercise and life expectancy = 75", () => {
     demographics.assignDailyExercise(true);
-    expect(demographics.exerciseDaily).toEqual(true);
+    expect(demographics.exerciseDaily).toBeTruthy();
     expect(demographics.lifeExpectancy).toEqual(75);
   });
 
