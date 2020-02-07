@@ -24,4 +24,14 @@ describe("User", () => {
     expect(user.venusAge).toEqual(15.5);
   });
 
+  test("should correctly return user's age in Mars years", () => {
+    user.calculateMarsAge();
+    expect(user.marsAge).toEqual(47);
+  });
+
+  test("should correctly return user's age in Jupiter years", () => {
+    user.calculateJupiterAge();
+    expect(user.jupiterAge).toEqual(296.5);
+  });
+
 });
