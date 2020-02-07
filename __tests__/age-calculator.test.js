@@ -34,4 +34,19 @@ describe("User", () => {
     expect(user.jupiterAge).toEqual(296.5);
   });
 
+  test("should correctly return user's age in Saturn years", () => {
+    user.calculateSaturnAge();
+    expect(user.saturnAge).toEqual(2);
+  });
+
+  test("should correctly return user's age in Uranus years", () => {
+    user.calculateUranusAge();
+    expect(user.uranusAge).toEqual(5.75);
+  });
+
+  test("should correctly return user's age in Neptune years", () => {
+    user.calculateNeptuneAge();
+    expect(user.neptuneAge).toEqual(11.25);
+  });
+
 });
