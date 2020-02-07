@@ -8,26 +8,30 @@ describe("Demographics", () => {
     expect(demographics).toBeInstanceOf(Demographics);
   });
 
-  test("should correctly assign true/false to daily exercise", () => {
+  test("should correctly assign true to daily exercise and life expectancy = 75", () => {
     demographics.assignDailyExercise(true);
     expect(demographics.exerciseDaily).toEqual(true);
+    expect(demographics.lifeExpectancy).toEqual(75);
   });
 
-  test("should correctly assign 'normal' to BMI", () => {
+  test("should correctly assign 'Normal' to BMI and life expectancy = 125", () => {
     demographics.assignBMI("Normal");
     expect(demographics.bmi).toEqual("Normal");
+    expect(demographics.lifeExpectancy).toEqual(125);
   });
 
-  test("should correctly assign a job title to occupation", () => {
+  test("should correctly assign a job title to occupation and life expectancy = 100", () => {
     demographics.assignOccupation("Professional Rock Climber");
     expect(demographics.occupation).toEqual("Professional Rock Climber");
+    expect(demographics.lifeExpectancy).toEqual(100);
   });
 
   test("key-pair values should correctly matches the expected properties", () => {
     expect.objectContaining({
       exerciseDaily: expect.any(Boolean),
       bmi: expect.any(String),
-      occupation: expect.any(String)
+      occupation: expect.any(String),
+      lifeExpectancy: expect.any(Number)
     });
   });
 
