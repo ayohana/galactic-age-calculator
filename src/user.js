@@ -5,6 +5,9 @@ export class User {
     this.venusAge = this.calculateVenusAge();
     this.marsAge = this.calculateMarsAge();
     this.jupiterAge = this.calculateJupiterAge();
+    this.saturnAge = this.calculateSaturnAge();
+    this.uranusAge = this.calculateUranusAge();
+    this.neptuneAge = this.calculateNeptuneAge();
   }
 
   calculateMercuryAge() {
@@ -22,4 +25,17 @@ export class User {
   calculateJupiterAge() {
     return this.earthAge * 11.86;
   }
+
+  calculateSaturnAge() {
+    return this.earthAge * 0.08;
+  }
+
+  calculateUranusAge() {
+    return this.earthAge * 0.23;
+  }
+
+  calculateNeptuneAge() {
+    return this.earthAge * 0.45;
+  }
+
 }
