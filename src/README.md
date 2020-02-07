@@ -15,7 +15,7 @@
 * The user's age in Saturn years (0.08 Earth years per 1 Saturn year).
 * The user's age in Uranus years (0.23 Earth years per 1 Uranus year).
 * The user's age in Neptune years (0.45 Earth years per 1 Neptune year).
-* The user's remaining life expectancy based on their demographics.
+* The user's remaining life expectancy on each planet based on their demographics.
 * If the user has surpassed their life expectancy, it will return the number of years they have lived past the life expectancy.
 
 ## Specs
@@ -34,6 +34,7 @@
 | **Program Returns User's Age in Uranus Years** | 25 | 5.75 |
 | **Program Returns User's Age in Neptune Years** | 25 | 11.25 |
 | **Program Returns User's Remaining Life Expectancy Based on Their Demographics** | age 25, exercises daily, BMI within normal limits, occupation: professional rock climber | 75 |
+| **Program Returns User's Remaining Life Expectancy on Each Planet** | age 25, exercises daily, BMI within normal limits, occupation: professional rock climber | Remaining Life on Mercury = 18, Venus = 46.5, Mars = 141, and so on. |
 | **Program Returns User's Number of Years Lived Past Their Life Expectancy if User Surpassed Their Life Expectancy** | age 105, exercises daily, BMI within normal limits, occupation: professional rock climber | 5 |
 
 </details>

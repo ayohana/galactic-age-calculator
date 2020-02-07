@@ -52,9 +52,44 @@ describe("User", () => {
     expect(user.demographics).toBeInstanceOf(Demographics);
   });
 
-  test("should correctly return remaining years of user's life expectancy", () => {
+  test("should correctly return remaining years of user's life expectancy on Earth", () => {
     user.calculateRemainingLife();
-    expect(user.remainingLife).toEqual(75);
+    expect(user.remainingLifeOnEarth).toEqual(75);
+  });
+
+  test("should correctly return remaining years of user's life expectancy on Mercury", () => {
+    user.calculateRemainingLife();
+    expect(user.remainingLifeOnMercury).toEqual(18);
+  });
+
+  test("should correctly return remaining years of user's life expectancy on Venus", () => {
+    user.calculateRemainingLife();
+    expect(user.remainingLifeOnVenus).toEqual(46.5);
+  });
+
+  test("should correctly return remaining years of user's life expectancy on Mars", () => {
+    user.calculateRemainingLife();
+    expect(user.remainingLifeOnMars).toEqual(141);
+  });
+
+  test("should correctly return remaining years of user's life expectancy on Jupiter", () => {
+    user.calculateRemainingLife();
+    expect(user.remainingLifeOnJupiter).toEqual(889.5);
+  });
+
+  test("should correctly return remaining years of user's life expectancy on Saturn", () => {
+    user.calculateRemainingLife();
+    expect(user.remainingLifeOnSaturn).toEqual(6);
+  });
+
+  test("should correctly return remaining years of user's life expectancy on Uranus", () => {
+    user.calculateRemainingLife();
+    expect(user.remainingLifeOnUranus).toEqual(17.25);
+  });
+
+  test("should correctly return remaining years of user's life expectancy on Neptune", () => {
+    user.calculateRemainingLife();
+    expect(user.remainingLifeOnNeptune).toEqual(33.75);
   });
 
   test("otherwise should correctly return number of years surpassing life expectancy", () => {
@@ -63,7 +98,7 @@ describe("User", () => {
     anotherUser.demographics.assignBMI("Normal");
     anotherUser.demographics.assignOccupation("Professional Rock Climber");
     anotherUser.calculateRemainingLife();
-    expect(anotherUser.remainingLife).toEqual(5);
+    expect(anotherUser.remainingLifeOnEarth).toEqual(5);
   });
 
   test.todo("add UI to gather input values");
