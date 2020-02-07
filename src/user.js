@@ -42,7 +42,7 @@ export class User {
   }
 
   calculateRemainingLife() {
-    return this.remainingLife = this.demographics.lifeExpectancy - this.earthAge;
+    return this.remainingLife = Math.abs(this.demographics.lifeExpectancy - this.earthAge);
   }
 
 }

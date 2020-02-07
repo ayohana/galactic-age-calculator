@@ -6,9 +6,7 @@
 
 ## Description
 
-![An snippet of Super Galactic Age Calculator](./img/homepage.JPG/)
-
-**The back-end of this website calculates a person's age in solar years of various planets in our Solar System.** The user will enter their age in years and the back-end logic will return:
+**The back-end of this web application calculates a person's age in solar years of all the planets in our Solar System.** The user will enter their age in years and the back-end logic will return:
 
 * The user's age in Mercury years (.24 Earth years per 1 Mercury year).
 * The user's age in Venus years (.62 Earth years per 1 Venus year).
@@ -49,7 +47,7 @@
 
 ## Known Bugs
 
-No known bugs at this time.
+No known bugs at this time. _However,_ **there is no UI to this web application.**
 
 ## Support and contact details
 
@@ -72,6 +70,6 @@ _*Check out `package.json` file to see the complete list of all plugins._
 
 ### License
 
-This webpage is licensed under the MIT license.
+This web application is licensed under the MIT license.
 
 Copyright (c) 2020 **Adela Darmansyah**
