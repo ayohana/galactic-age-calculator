@@ -4,7 +4,7 @@ describe("Demographics", () => {
 
   let demographics = new Demographics();
 
-  test("should correctly create a demographics object as one of the key values of user object", () => {
+  test("should correctly create a demographics instance of Demographics class", () => {
     expect(demographics).toBeInstanceOf(Demographics);
   });
 
