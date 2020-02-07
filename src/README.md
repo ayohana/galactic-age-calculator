@@ -14,20 +14,25 @@
 * The user's age in Venus years (.62 Earth years per 1 Venus year).
 * The user's age in Mars years (1.88 Earth years per 1 Mars year).
 * The user's age in Jupiter years (11.86 Earth years per 1 Jupiter year).
-* The user's life expectancy based on their demographics.
+* The user's remaining life expectancy based on their demographics.
 * If the user has surpassed their life expectancy, it will return the number of years they have lived past the life expectancy.
 
 ## Specs
 
-<!-- <details>
-  <summary>Click to expand!</summary> -->
+<details>
+  <summary>Click to expand!</summary>
 
-<!-- | Spec | Input | Output |
+| Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-| **Homepage** | User accesses index.html | Homepage with user input form |
-| **Program Gathers User Input for a Topping** | `Checked Checkbox:` <br> "Tapioca Pearls" | `Console:` <br> "Tapioca Pearls" | -->
+| **Program Returns User's Age in Earth Years** | 25 | 25 |
+| **Program Returns User's Age in Mercury Years** | 25 | 6 |
+| **Program Returns User's Age in Venus Years** | 25 | 15.5 |
+| **Program Returns User's Age in Mars Years** | 25 | 47 |
+| **Program Returns User's Age in Jupiter Years** | 25 | 296.5 |
+| **Program Returns User's Remaining Life Expectancy Based on Their Demographics** | age 25, exercises daily, BMI within normal limits, occupation: professional rock climber | 75 |
+| **Program Returns User's Number of Years Lived Past Their Life Expectancy if User Surpassed Their Life Expectancy** | age 105, exercises daily, BMI within normal limits, occupation: professional rock climber | 5 |
 
-<!-- </details> -->
+</details>
 
 ## Setup/Installation Requirements
 
