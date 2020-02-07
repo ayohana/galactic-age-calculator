@@ -55,4 +55,12 @@ describe("User", () => {
     expect(user.demographics).toBeInstanceOf(Demographics);
   });
 
+  test("should correctly return remaining years of user's life expectancy", () => {
+    user.demographics.assignDailyExercise(true);
+    user.demographics.assignBMI("Normal");
+    user.demographics.assignOccupation("Professional Rock Climber");
+    user.calculateRemainingLife();
+    expect(user.remainingLife).toEqual(75);
+  });
+
 });

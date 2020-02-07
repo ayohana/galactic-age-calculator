@@ -1,3 +1,5 @@
+import { Demographics } from "../src/demographics";
+
 export class User {
   constructor(age) {
     this.earthAge = age;
@@ -8,6 +10,7 @@ export class User {
     this.saturnAge = this.calculateSaturnAge();
     this.uranusAge = this.calculateUranusAge();
     this.neptuneAge = this.calculateNeptuneAge();
+    this.demographics = new Demographics();
   }
 
   calculateMercuryAge() {
@@ -36,6 +39,10 @@ export class User {
 
   calculateNeptuneAge() {
     return this.earthAge * 0.45;
+  }
+
+  calculateRemainingLife() {
+    return this.remainingLife = this.demographics.lifeExpectancy - this.earthAge;
   }
 
 }
