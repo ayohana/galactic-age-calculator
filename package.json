@@ -1,7 +1,6 @@
 {
   "name": "galactic-age-calculator",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode development",
@@ -34,5 +33,10 @@
     "jquery": "^3.4.1",
     "popper.js": "^1.16.1",
     "url-loader": "^3.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "/home/floa/Desktop/config-template/"
+  },
+  "description": ""
 }
