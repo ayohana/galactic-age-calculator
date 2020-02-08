@@ -53,7 +53,7 @@ describe("User", () => {
   });
 
   test("should correctly return remaining years of user's life expectancy on each planet", () => {
-    user.calculateRemainingLife();
+    user.checkLife();
     expect(user.remainingLifeOnEarth).toEqual("75.0");
     expect(user.remainingLifeOnMercury).toEqual("18.0");
     expect(user.remainingLifeOnVenus).toEqual("46.5");
@@ -69,8 +69,7 @@ describe("User", () => {
     anotherUser.demographics.assignDailyExercise(true);
     anotherUser.demographics.assignBMI("Normal");
     anotherUser.demographics.assignOccupation("Professional Rock Climber");
-    anotherUser.calculateRemainingLife();
-    anotherUser.calculateExtraLife();
+    anotherUser.checkLife();
     expect(anotherUser.extraLifeOnEarth).toEqual(5);
     expect(anotherUser.extraLifeOnMercury).toEqual(1.2);
     expect(anotherUser.extraLifeOnVenus).toEqual(3.1);

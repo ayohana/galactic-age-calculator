@@ -41,7 +41,7 @@ export class User {
     return earthAge * 0.45;
   }
 
-  checkLife () {
+  checkLife() {
     if (this.earthAge < this.demographics.lifeExpectancy) {
       this.calculateRemainingLife();
     } else {
