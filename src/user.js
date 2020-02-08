@@ -41,6 +41,14 @@ export class User {
     return earthAge * 0.45;
   }
 
+  checkLife () {
+    if (this.earthAge < this.demographics.lifeExpectancy) {
+      this.calculateRemainingLife();
+    } else {
+      this.calculateExtraLife();
+    }
+  }
+
   calculateRemainingLife() {
     let lifeExpectancyOnEarth = this.demographics.lifeExpectancy;
     this.remainingLifeOnEarth = (lifeExpectancyOnEarth - this.earthAge).toFixed(1);
@@ -54,18 +62,15 @@ export class User {
   }
 
   calculateExtraLife() {
-    if (Math.sign(this.remainingLifeOnEarth) === -1) {
-      this.extraLifeOnEarth = Math.abs(this.remainingLifeOnEarth);
-      this.extraLifeOnMercury = Math.abs(this.remainingLifeOnMercury);
-      this.extraLifeOnVenus = Math.abs(this.remainingLifeOnVenus);
-      this.extraLifeOnMars = Math.abs(this.remainingLifeOnMars);
-      this.extraLifeOnJupiter = Math.abs(this.remainingLifeOnJupiter);
-      this.extraLifeOnSaturn = Math.abs(this.remainingLifeOnSaturn);
-      this.extraLifeOnUranus = Math.abs(this.remainingLifeOnUranus);
-      this.extraLifeOnNeptune = Math.abs(this.remainingLifeOnNeptune);
-    } else {
-      this.extraLifeOnAnyPlanet = 0;
-    }
+    let lifeExpectancyOnEarth = this.demographics.lifeExpectancy;
+    this.extraLifeOnEarth = Math.abs((lifeExpectancyOnEarth - this.earthAge).toFixed(1));
+    this.extraLifeOnMercury = Math.abs((this.calculateMercuryAge(lifeExpectancyOnEarth) - this.mercuryAge).toFixed(1));
+    this.extraLifeOnVenus = Math.abs((this.calculateVenusAge(lifeExpectancyOnEarth) - this.venusAge).toFixed(1));
+    this.extraLifeOnMars = Math.abs((this.calculateMarsAge(lifeExpectancyOnEarth) - this.marsAge).toFixed(1));
+    this.extraLifeOnJupiter = Math.abs((this.calculateJupiterAge(lifeExpectancyOnEarth) - this.jupiterAge).toFixed(1));
+    this.extraLifeOnSaturn = Math.abs((this.calculateSaturnAge(lifeExpectancyOnEarth) - this.saturnAge).toFixed(1));
+    this.extraLifeOnUranus = Math.abs((this.calculateUranusAge(lifeExpectancyOnEarth) - this.uranusAge).toFixed(1));
+    this.extraLifeOnNeptune = Math.abs((this.calculateNeptuneAge(lifeExpectancyOnEarth) - this.neptuneAge).toFixed(1));
   }
 
 }
