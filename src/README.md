@@ -6,7 +6,7 @@
 
 ## Description
 
-**The back-end of this web application calculates a person's age in solar years of all the planets in our Solar System.** The user will enter their age in years and the back-end logic will return:
+**The back-end of this web application calculates a person's age in solar years of all the planets in our Solar System.** The user will be able to enter their age in years and the back-end logic will return:
 
 * The user's age in Mercury years (.24 Earth years per 1 Mercury year).
 * The user's age in Venus years (.62 Earth years per 1 Venus year).
@@ -16,7 +16,7 @@
 * The user's age in Uranus years (0.23 Earth years per 1 Uranus year).
 * The user's age in Neptune years (0.45 Earth years per 1 Neptune year).
 * The user's remaining life expectancy on each planet based on their demographics.
-* If the user has surpassed their life expectancy, it will return the number of years they have lived past the life expectancy.
+* If the user has surpassed their life expectancy, it will return the number of years they have lived past their life expectancy on each planet.
 
 ## Specs
 
@@ -33,9 +33,10 @@
 | **Program Returns User's Age in Saturn Years** | 25 | 2 |
 | **Program Returns User's Age in Uranus Years** | 25 | 5.75 |
 | **Program Returns User's Age in Neptune Years** | 25 | 11.25 |
-| **Program Returns User's Remaining Life Expectancy Based on Their Demographics** | age 25, exercises daily, BMI within normal limits, occupation: professional rock climber | 75 |
-| **Program Returns User's Remaining Life Expectancy on Each Planet** | age 25, exercises daily, BMI within normal limits, occupation: professional rock climber | Remaining Life on Mercury = 18, Venus = 46.5, Mars = 141, and so on. |
-| **Program Returns User's Number of Years Lived Past Their Life Expectancy if User Surpassed Their Life Expectancy** | age 105, exercises daily, BMI within normal limits, occupation: professional rock climber | 5 |
+| **Program Returns User's Remaining Life Expectancy Based on Their Demographics** | age 25, exercises daily, BMI within normal limits, occupation: Professional Rock Climber | 75 |
+| **Program Returns User's Remaining Life Expectancy on Each Planet** | age 25, exercises daily, BMI within normal limits, occupation: Professional Rock Climber | Remaining Life on Earth = 75, Mercury = 18, Venus = 46.5, Mars = 141, and so on. |
+| **Program Returns User's Number of Years Lived Past Their Life Expectancy if User Surpassed Their Life Expectancy** | age 105, exercises daily, BMI within normal limits, occupation: Professional Rock Climber | 5 |
+| **Program Returns User's Number of Years Lived Surpassing Their Life Expectancy on Each Planet** | age 105, exercises daily, BMI within normal limits, occupation: Professional Rock Climber | Extra life on Earth = 5, Mercury = 1.2, Venus = 3.1, and so on. |
 
 </details>
 

@@ -52,44 +52,16 @@ describe("User", () => {
     expect(user.demographics).toBeInstanceOf(Demographics);
   });
 
-  test("should correctly return remaining years of user's life expectancy on Earth", () => {
+  test("should correctly return remaining years of user's life expectancy on each planet", () => {
     user.calculateRemainingLife();
-    expect(user.remainingLifeOnEarth).toEqual(75);
-  });
-
-  test("should correctly return remaining years of user's life expectancy on Mercury", () => {
-    user.calculateRemainingLife();
-    expect(user.remainingLifeOnMercury).toEqual(18);
-  });
-
-  test("should correctly return remaining years of user's life expectancy on Venus", () => {
-    user.calculateRemainingLife();
-    expect(user.remainingLifeOnVenus).toEqual(46.5);
-  });
-
-  test("should correctly return remaining years of user's life expectancy on Mars", () => {
-    user.calculateRemainingLife();
-    expect(user.remainingLifeOnMars).toEqual(141);
-  });
-
-  test("should correctly return remaining years of user's life expectancy on Jupiter", () => {
-    user.calculateRemainingLife();
-    expect(user.remainingLifeOnJupiter).toEqual(889.5);
-  });
-
-  test("should correctly return remaining years of user's life expectancy on Saturn", () => {
-    user.calculateRemainingLife();
-    expect(user.remainingLifeOnSaturn).toEqual(6);
-  });
-
-  test("should correctly return remaining years of user's life expectancy on Uranus", () => {
-    user.calculateRemainingLife();
-    expect(user.remainingLifeOnUranus).toEqual(17.25);
-  });
-
-  test("should correctly return remaining years of user's life expectancy on Neptune", () => {
-    user.calculateRemainingLife();
-    expect(user.remainingLifeOnNeptune).toEqual(33.75);
+    expect(user.remainingLifeOnEarth).toEqual("75.0");
+    expect(user.remainingLifeOnMercury).toEqual("18.0");
+    expect(user.remainingLifeOnVenus).toEqual("46.5");
+    expect(user.remainingLifeOnMars).toEqual("141.0");
+    expect(user.remainingLifeOnJupiter).toEqual("889.5");
+    expect(user.remainingLifeOnSaturn).toEqual("6.0");
+    expect(user.remainingLifeOnUranus).toEqual("17.3");
+    expect(user.remainingLifeOnNeptune).toEqual("33.8");
   });
 
   test("otherwise should correctly return number of years surpassing life expectancy", () => {
@@ -98,7 +70,15 @@ describe("User", () => {
     anotherUser.demographics.assignBMI("Normal");
     anotherUser.demographics.assignOccupation("Professional Rock Climber");
     anotherUser.calculateRemainingLife();
-    expect(anotherUser.remainingLifeOnEarth).toEqual(5);
+    anotherUser.calculateExtraLife();
+    expect(anotherUser.extraLifeOnEarth).toEqual(5);
+    expect(anotherUser.extraLifeOnMercury).toEqual(1.2);
+    expect(anotherUser.extraLifeOnVenus).toEqual(3.1);
+    expect(anotherUser.extraLifeOnMars).toEqual(9.4);
+    expect(anotherUser.extraLifeOnJupiter).toEqual(59.3);
+    expect(anotherUser.extraLifeOnSaturn).toEqual(0.4);
+    expect(anotherUser.extraLifeOnUranus).toEqual(1.2);
+    expect(anotherUser.extraLifeOnNeptune).toEqual(2.3);
   });
 
   test.todo("add UI to gather input values");
